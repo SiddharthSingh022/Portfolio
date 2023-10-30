@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: aliceblue;
+    background: #000000;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: black;
+    display: flex;
+    justify-content: space between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: beige;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(.2s *var(--i));
+}
+
+.navbar a:hover {
+    color: #84b3e5;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('Untitled design.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: #00efff;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+    /* animation: slideRight 1s ease forwards; */
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+h3 .text1 {
+    text-align: center; /* Aligns the text to the center */
+    color: #00efff; /* Sets the text color */
+    font-size: 25px; /* Adjusts the font size */
+    font-family: Arial, sans-serif; /* Defines the font family */
+    font-weight: bold; /* Makes the text bolder */
+    text-shadow: 10px 10px 12px rgba(117, 29, 224, 0.7); /* Adds a subtle text shadow */
+  }
+  
+.bx {
+    font-family: 'boxicons' !important;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    color: aliceblue;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.home-sci {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00efff;
+    font-size: 20px;
+    color: #00efff;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+.home-sci a:hover {
+    background: #00efff;
+    color: #081b29;
+    box-shadow: 0 0 20px #00efff;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #00efff;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px#00efff, 0 0 25px #00efff;
+
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-img-img {
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 80px;
+}
+
+#services {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.sub-title span {
+    color: #00efff;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+        1px 1px 40px #0053b0f6
+}
+
+.services-list div i {
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #00efff;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px#00efff, 0 0 25px #00efff;
+}
+
+.read:hover {
+    box-shadow: 0 0 5px cyan,
+     0 0 25px cyan,
+      0 0 50px cyan,
+      0 0 100px cyan,
+       0 0 200px cyan;
+}
+.services-list div:hover{
+    transform:translate(-10px);
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 7spx 90px;
+    margin-left: 120px;
+}
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom:50px ;
+}
+.bar{
+    font-size: 23px;
+}
+.Techinal-bars .bar{
+    margin-top: 40px 0;
+}
+.Techinal-bars .bar:first-child{
+    margin-top: 0;
+}
+.Techinal-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.Techinal-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Techinal-bars .bar.info span{
+    font-size:17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    animation: animate-line 1s cubic-bezier(1, 0, 0, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate-line {
+    100% {
+        transform: scaleX(1);
+    }
+}
+.Techinal-section {
+    text-align: center; /* To center-align the content within the section */
+}
+
+.container1 {
+    max-width: 600px; /* Adjust as per your layout needs */
+    margin: 0 auto; /* To center the container horizontally */
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading1 {
+    color: #ffffff; /* Color for "Technical Skills" heading */
+}
+
+.Technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #00efff;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate-span 1s cubic-bezier(1, 0, 0, 1) 1s forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate-span {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.Technical-bars .bar .progress-line .html span {
+    width: 90%;
+}
+
+.Technical-bars .bar .progress-line .css span {
+    width: 80%;
+}
+
+.Technical-bars .bar .progress-line .javascript span {
+    width: 65%;
+}
+
+.Technical-bars .bar .progress-line .react span {
+    width: 70%;
+}
+.Services-section {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.contact-section {
+    text-align: center; /* To center-align the text content */
+}
+.contact-section h1 {
+    color: #00efff;
+}
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    align-content: center;
+}
+
+.contact-section form {
+    max-width: 300px;
+    width: 100%;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align form elements to the left */
+}
+
+.contact-section form label {
+    font-weight: bold;
+}
+
+.contact-section form input[type="text"],
+.contact-section form input[type="email"],
+.contact-section form textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.contact-section form textarea {
+    height: 100px;
+}
+
+.contact-section form input[type="submit"] {
+    background-color: #00efff;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border:#000000;
+    font-weight: bold;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 0 5px#00efff, 0 0 25px #00efff;
+}
+
+.contact-section form input[type="submit"]:hover {
+    box-shadow: 0 0 5px cyan,
+     0 0 25px cyan,
+      0 0 50px cyan,
+      0 0 100px cyan,
+       0 0 200px cyan;
+}
+
+
+
+
+
+.container{
+    padding: 100px;
+    padding-right: 100px;
+}
+
+img {
+    border-radius: 66px;
+    border-color: #00efff;
+    border-width: 10px 10px 10px 10px transparent;
+    border-style: inherit;
+    border-image-width: 10px !important;
+    margin: auto;
+}
+
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: #00efff;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
