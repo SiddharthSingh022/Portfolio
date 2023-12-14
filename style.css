@@ -4,7 +4,10 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+.container {
+    padding: 40px;
+    padding-right: 100px;
+}
 body {
     color: aliceblue;
     background: #000000;
